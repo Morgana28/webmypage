@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morgana GB | Portfólio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #002a2b, #240046, #3c096c);
+            color: white;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 25px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.25);
+        }
+
+        header h1 {
+            color: #e0aaff;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        nav a:hover {
+            color: #ff70d9;
+        }
+
+        main {
+            padding: 80px 10%;
+        }
+
+        .apresentacao {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .foto {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #e0aaff;
+            box-shadow: 0 0 30px #ab4edd;
+        }
+
+        .texto {
+            max-width: 550px;
+        }
+
+        .texto h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .texto h2 span {
+            color: #e0aaff;
+        }
+
+        .texto p {
+            color: #ddd;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        button {
+            margin-top: 25px;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(90deg, #ab4edd, #635bf1);
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        section {
+            margin-top: 90px;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #e0aaff;
+            margin-bottom: 25px;
+            font-size: 30px;
+        }
+
+        .habilidades {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .habilidades span {
+            background: rgba(255,255,255,0.12);
+            border: 1px solid #ab4edd;
+            padding: 15px 25px;
+            border-radius: 20px;
+        }
+
+        .links a {
+            color: #e0aaff;
+            margin: 10px;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1> </h1>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre mim</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
+
+<main id="inicio">
+
+    <div class="apresentacao">
+
+        <div class="apresentacao">
+
+    <img src="imagens/cyberdream.jpeg"
+         alt="Imagem CyberDream"
+         class="foto">
+
+</div>
+
+        <div class="texto">
+            <h2> 
+                <span>Eu sou Morgana GB</span>
+            </h2>
+
+            <p>
+                Profissional de Tecnologia da Informação,
+                com experiência em SAP Security, IAM e gestão
+                de acessos.
+
+                Tenho interesse em cibersegurança, inteligência
+                artificial, programação e transformação digital.
+
+                Estou sempre buscando aprender, desenvolver
+                novas habilidades e explorar as possibilidades
+                da tecnologia.
+            </p>
+
+            <button onclick="mostrarMensagem()">
+                Vamos conversar?
+            </button>
+
+            <p id="mensagem"></p>
+        </div>
+
+    </div>
+
+    <section id="sobre">
+        <h2>Sobre mim</h2>
+        <p>
+            Tecnologia é muito mais do que códigos:
+            é criatividade, inovação e possibilidades
+            para transformar o futuro.
+        </p>
+    </section>
+
+    <section id="habilidades">
+        <h2>Conhecimentos e interesses</h2>
+
+        <div class="habilidades">
+            <span>SAP Security</span>
+            <span>IAM</span>
+            <span>SAP GRC</span>
+            <span>Gestão de Acessos</span>
+            <span>HTML</span>
+            <span>JavaScript</span>
+            <span>Cibersegurança</span>
+            <span>Inteligência Artificial</span>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Vamos nos conectar?</h2>
+
+        <div class="links">
+            <a href="https://github.com/" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/morgana-brito-6b573570/" target="_blank">LinkedIn</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    Desenvolvido por Morgana.BOT
+</footer>
+
+<script>
+    function mostrarMensagem() {
+        document.getElementById("mensagem").innerHTML =
+            "Obrigada pela visita! Vamos conectar?";
+    }
+</script>
+
+</body>
+</html>
