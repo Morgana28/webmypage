@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Morgana GB | Portfólio</title>
 
     <style>
@@ -12,6 +14,10 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #002a2b, #240046, #3c096c);
@@ -19,31 +25,45 @@
             min-height: 100vh;
         }
 
+        /* CABEÇALHO */
+
         header {
             padding: 25px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             background: rgba(0, 0, 0, 0.25);
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         header h1 {
             color: #e0aaff;
         }
 
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 25px;
+            transition: 0.3s;
         }
 
         nav a:hover {
             color: #ff70d9;
         }
 
+        /* CONTEÚDO PRINCIPAL */
+
         main {
             padding: 80px 10%;
         }
+
+        /* APRESENTAÇÃO */
 
         .apresentacao {
             display: flex;
@@ -90,7 +110,20 @@
             color: white;
             cursor: pointer;
             font-size: 16px;
+            transition: 0.3s;
         }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #ab4edd;
+        }
+
+        #mensagem {
+            margin-top: 15px;
+            color: #e0aaff;
+        }
+
+        /* SEÇÕES */
 
         section {
             margin-top: 90px;
@@ -99,9 +132,27 @@
 
         section h2 {
             color: #e0aaff;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             font-size: 30px;
         }
+
+        /* SOBRE MIM */
+
+        #sobre {
+            max-width: 1000px;
+            margin: 100px auto 0;
+            padding: 0 10px;
+        }
+
+        #sobre p {
+            color: #e0e0e0;
+            font-size: 17px;
+            line-height: 1.9;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        /* HABILIDADES */
 
         .habilidades {
             display: flex;
@@ -111,126 +162,314 @@
         }
 
         .habilidades span {
-            background: rgba(255,255,255,0.12);
+            background: rgba(255, 255, 255, 0.12);
             border: 1px solid #ab4edd;
             padding: 15px 25px;
             border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .habilidades span:hover {
+            background: rgba(171, 78, 221, 0.35);
+            transform: translateY(-4px);
+        }
+
+        /* CONTATO */
+
+        .links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
         .links a {
             color: #e0aaff;
-            margin: 10px;
             text-decoration: none;
+            transition: 0.3s;
         }
+
+        .links a:hover {
+            color: #ff70d9;
+        }
+
+        /* RODAPÉ */
 
         footer {
             text-align: center;
             padding: 30px;
             color: #ccc;
+            margin-top: 50px;
+            background: rgba(0, 0, 0, 0.20);
         }
+
+        /* RESPONSIVIDADE PARA CELULARES */
+
+        @media (max-width: 768px) {
+
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            main {
+                padding: 50px 6%;
+            }
+
+            .apresentacao {
+                gap: 35px;
+                text-align: center;
+            }
+
+            .foto {
+                width: 200px;
+                height: 200px;
+            }
+
+            .texto h2 {
+                font-size: 32px;
+            }
+
+            #sobre {
+                margin-top: 70px;
+                padding: 0;
+            }
+
+            #sobre p {
+                font-size: 16px;
+                line-height: 1.8;
+                text-align: left;
+            }
+
+            section h2 {
+                font-size: 26px;
+            }
+        }
+
     </style>
 </head>
 
 <body>
 
-<header>
-    <h1> </h1>
+    <!-- CABEÇALHO -->
 
-    <nav>
-        <a href="#inicio">Início</a>
-        <a href="#sobre">Sobre mim</a>
-        <a href="#habilidades">Habilidades</a>
-        <a href="#contato">Contato</a>
-    </nav>
-</header>
+    <header>
+        <h1>Morgana GB</h1>
 
-<main id="inicio">
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre mim</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
 
-    <div class="apresentacao">
+    <!-- APRESENTAÇÃO -->
+
+    <main id="inicio">
 
         <div class="apresentacao">
 
- <img src="Morgana.jpeg"
-     alt="Foto de Morgana"
-     class="foto">
+            <img src="Morgana.jpeg"
+                 alt="Foto de Morgana"
+                 class="foto">
 
-</div>
+            <div class="texto">
 
-        <div class="texto">
-            <h2> 
-                <span>Eu sou Morgana GB</span>
-            </h2>
+                <h2>
+                    Eu sou <span>Morgana GB</span>
+                </h2>
+
+                <p>
+                    Profissional de Tecnologia da Informação,
+                    com 11 anos de experiência, atuando em áreas
+                    como SAP Security, IAM, Compliance e Segurança
+                    da Informação.
+
+                    Tenho interesse em cibersegurança, inteligência
+                    artificial, programação, automação e transformação
+                    digital.
+
+                    Estou sempre buscando aprender, desenvolver
+                    novas habilidades e explorar as possibilidades
+                    da tecnologia para criar soluções inovadoras.
+                </p>
+
+                <button onclick="mostrarMensagem()">
+                    Vamos conversar?
+                </button>
+
+                <p id="mensagem" aria-live="polite"></p>
+
+            </div>
+
+        </div>
+
+        <!-- SOBRE MIM -->
+
+        <section id="sobre">
+
+            <h2>Sobre mim</h2>
 
             <p>
-                Profissional de Tecnologia da Informação,
-                com experiência em SAP Security, IAM e gestão
-                de acessos.
-
-                Tenho interesse em cibersegurança, inteligência
-                artificial, programação e transformação digital.
-
-                Estou sempre buscando aprender, desenvolver
-                novas habilidades e explorar as possibilidades
-                da tecnologia.
+                Sou Bacharel em Sistemas de Informação, com pós-graduação
+                em Design de Interação para Artefatos Digitais, e possuo
+                11 anos de experiência profissional na área de Tecnologia
+                da Informação (TI), construindo uma trajetória diversificada
+                que abrange suporte técnico, segurança da informação,
+                compliance, administração de ambientes corporativos e
+                soluções tecnológicas.
             </p>
 
-            <button onclick="mostrarMensagem()">
-                Vamos conversar?
-            </button>
+            <p>
+                Ao longo da minha carreira, acumulei aproximadamente
+                4 anos de experiência em Service Desk e suporte ao usuário,
+                atuando na resolução de incidentes e problemas relacionados
+                a hardware, software, sistemas operacionais e aplicações
+                corporativas, contribuindo para a continuidade e eficiência
+                das operações de TI.
+            </p>
 
-            <p id="mensagem"></p>
-        </div>
+            <p>
+                Também possuo aproximadamente 4 anos de experiência em
+                Compliance e Segurança da Informação, trabalhando em
+                conjunto com equipes de segurança para garantir a aderência
+                às políticas, normas, controles e requisitos de conformidade
+                da organização. Essa atuação me proporcionou conhecimentos
+                sólidos em compliance, governança de acessos, controles de
+                segurança e processos corporativos.
+            </p>
 
-    </div>
+            <p>
+                Possuo 3 anos de experiência em SAP Security, com atuação
+                em ambientes SAP ECC, SAP BW, SAP PI e SAP GRC, realizando
+                atividades de administração e governança de acessos,
+                manutenção e atualização de perfis de autorização, criação
+                e provisionamento de usuários, concessão e revogação de
+                acessos, além de análise e troubleshooting de problemas
+                relacionados a autorizações.
+            </p>
 
-    <section id="sobre">
-        <h2>Sobre mim</h2>
-        <p>
-            Sou Bacharel em Sistemas de Informação, com pós-graduação em Design de Interação para Artefatos Digitais, 
-            e possuo 11 anos de experiência profissional na área de Tecnologia da Informação (TI), construindo uma trajetória diversificada 
-            que abrange suporte técnico, segurança da informação, compliance, administração de ambientes corporativos e soluções tecnológicas.
-            Tecnologia é muito mais do que códigos:
-            é criatividade, inovação e possibilidades
-            para transformar o futuro.
-        </p>
-    </section>
+            <p>
+                Durante minha atuação em SAP Security, utilizei frequentemente
+                transações como PFCG, SU01, SUIM, SU10, SE16N, SE09, SE10,
+                SU53, SU53ADM e TRACE, apoiando atividades de manutenção
+                de roles, administração de usuários, análise de autorizações,
+                investigação de falhas de acesso e acompanhamento de
+                transportes.
+            </p>
 
-    <section id="habilidades">
-        <h2>Conhecimentos e interesses</h2>
+            <p>
+                Minha experiência técnica também inclui conhecimentos em
+                Active Directory (AD), administração de servidores, macOS,
+                AWS, IAM, SAP GUI Scripting e automação de atividades com
+                VBScript. Além disso, venho desenvolvendo conhecimentos
+                em Python, com foco na criação de aplicações desktop,
+                ampliando meu interesse por automação, desenvolvimento
+                de soluções e otimização de processos tecnológicos.
+            </p>
 
-        <div class="habilidades">
-            <span>SAP Security</span>
-            <span>IAM</span>
-            <span>SAP GRC</span>
-            <span>Gestão de Acessos</span>
-            <span>HTML</span>
-            <span>JavaScript</span>
-            <span>Cibersegurança</span>
-            <span>Inteligência Artificial</span>
-        </div>
-    </section>
+            <p>
+                Minha formação acadêmica contempla projetos de pesquisa
+                e produção científica, incluindo artigos relacionados
+                à interação humano-computador, usabilidade e experiência
+                do usuário (UX), fortalecendo minha visão sobre a importância
+                de desenvolver soluções tecnológicas eficientes, acessíveis
+                e centradas nas pessoas.
+            </p>
 
-    <section id="contato">
-        <h2>Vamos nos conectar?</h2>
+            <p>
+                Tenho perfil analítico, raciocínio lógico, facilidade
+                de aprendizado, adaptabilidade e interesse contínuo em
+                inovação e desenvolvimento profissional. Acredito que
+                a tecnologia vai muito além de sistemas e códigos:
+                ela é construída por pessoas, ideias e possibilidades.
+                Gosto de aprender, compartilhar conhecimento e transformar
+                desafios em oportunidades de crescimento, contribuindo
+                para ambientes tecnológicos mais seguros, eficientes
+                e alinhados às necessidades do negócio.
+            </p>
 
-        <div class="links">
-        <a href="https://morgana28.github.io/webmypage/" target="_blank">Meu Site</a>
-        <a href="https://www.linkedin.com/in/morgana-brito-6b573570/" target="_blank">LinkedIn</a>
-    </div>
-    </section>
+        </section>
 
-</main>
+        <!-- HABILIDADES -->
 
-<footer>
-    Desenvolvido por Morgana.BOT
-</footer>
+        <section id="habilidades">
 
-<script>
-    function mostrarMensagem() {
-        document.getElementById("mensagem").innerHTML =
-            "Vamos conectar? Meu linkdlin está logo abaixo, só clicar! Obrigada pela visita! ";
-    }
-</script>
+            <h2>Conhecimentos e interesses</h2>
+
+            <div class="habilidades">
+
+                <span>SAP Security</span>
+                <span>SAP ECC</span>
+                <span>SAP BW</span>
+                <span>SAP PI</span>
+                <span>SAP GRC</span>
+                <span>IAM</span>
+                <span>Gestão de Acessos</span>
+                <span>Active Directory</span>
+                <span>VBScript</span>
+                <span>Python</span>
+                <span>HTML</span>
+                <span>JavaScript</span>
+                <span>Cibersegurança</span>
+                <span>Inteligência Artificial</span>
+                <span>Automação</span>
+                <span>UX e Usabilidade</span>
+
+            </div>
+
+        </section>
+
+        <!-- CONTATO -->
+
+        <section id="contato">
+
+            <h2>Vamos nos conectar?</h2>
+
+            <div class="links">
+
+                <a href="https://morgana28.github.io/webmypage/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Meu Site
+                </a>
+
+                <a href="https://www.linkedin.com/in/morgana-brito-6b573570/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+
+    <footer>
+        Desenvolvido por Morgana.BOT
+    </footer>
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function mostrarMensagem() {
+
+            document.getElementById("mensagem").innerHTML =
+                'Vamos nos conectar! Meu LinkedIn está logo abaixo. Obrigada pela visita!';
+
+        }
+
+    </script>
 
 </body>
 </html>
