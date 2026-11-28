@@ -9,7 +9,12 @@
 
     <title>Morgana GB | Portfólio</title>
 
+    <!-- ÍCONES FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -144,7 +149,7 @@
             box-shadow: 0 0 22px rgba(255, 112, 217, 0.7);
         }
 
-        /* BOTÃO SOBRE MIM EM DESTAQUE */
+        /* BOTÃO SOBRE MIM */
 
         .botao-sobre {
             padding: 17px 35px;
@@ -237,7 +242,10 @@
         }
 
         .links a {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
             color: #e0aaff;
             text-decoration: none;
             padding: 12px 24px;
@@ -250,6 +258,53 @@
             color: white;
             background: #ab4edd;
             transform: translateY(-3px);
+        }
+
+        /* WHATSAPP NA SEÇÃO DE CONTATO */
+
+        .links .whatsapp {
+            color: white;
+            background: #25D366;
+            border: 1px solid #25D366;
+            font-weight: bold;
+        }
+
+        .links .whatsapp i {
+            font-size: 22px;
+        }
+
+        .links .whatsapp:hover {
+            color: white;
+            background: #128C7E;
+            border-color: #128C7E;
+            box-shadow: 0 0 15px rgba(37, 211, 102, 0.5);
+        }
+
+        /* WHATSAPP FLUTUANTE */
+
+        .whatsapp-flutuante {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 62px;
+            height: 62px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+            z-index: 9999;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-flutuante:hover {
+            background: #128C7E;
+            transform: scale(1.12);
+            box-shadow: 0 0 20px rgba(37, 211, 102, 0.7);
         }
 
         /* ACESSIBILIDADE */
@@ -294,7 +349,6 @@
             .texto {
                 max-width: 100%;
             }
-
         }
 
         /* CELULARES */
@@ -392,10 +446,26 @@
                 font-size: 14px;
             }
 
+            .links {
+                gap: 12px;
+            }
+
+            .links a {
+                padding: 12px 18px;
+                font-size: 14px;
+            }
+
+            .whatsapp-flutuante {
+                width: 55px;
+                height: 55px;
+                font-size: 31px;
+                bottom: 18px;
+                right: 18px;
+            }
+
             footer {
                 font-size: 13px;
             }
-
         }
 
         /* TELAS MUITO PEQUENAS */
@@ -419,12 +489,12 @@
                 width: 165px;
                 height: 165px;
             }
-
         }
 
-        /* RESPEITA PREFERÊNCIA POR MENOS ANIMAÇÕES */
+        /* MENOS ANIMAÇÕES */
 
         @media (prefers-reduced-motion: reduce) {
+
             html {
                 scroll-behavior: auto;
             }
@@ -637,7 +707,18 @@
                     target="_blank"
                     rel="noopener noreferrer"
                 >
+                    <i class="fa-solid fa-globe" aria-hidden="true"></i>
                     Meu Site
+                </a>
+
+                <a
+                    href="https://wa.me/5581995970744"
+                    class="whatsapp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                    WhatsApp
                 </a>
 
                 <a
@@ -645,6 +726,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                 >
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                     LinkedIn
                 </a>
 
@@ -659,6 +741,19 @@
     <footer>
         Desenvolvido por Morgana.BOT
     </footer>
+
+    <!-- WHATSAPP FLUTUANTE -->
+
+    <a
+        href="https://wa.me/5581995970744"
+        class="whatsapp-flutuante"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Entre em contato pelo WhatsApp"
+        title="Fale comigo pelo WhatsApp"
+    >
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+    </a>
 
 </body>
 </html>
