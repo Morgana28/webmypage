@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="description" content="Portfólio profissional de Morgana GB. Experiência em SAP Security, IAM, Compliance e Segurança da Informação.">
+
     <title>Morgana GB | Portfólio</title>
 
     <style>
@@ -16,6 +18,7 @@
 
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 30px;
         }
 
         body {
@@ -23,43 +26,51 @@
             background: linear-gradient(135deg, #002a2b, #240046, #3c096c);
             color: white;
             min-height: 100vh;
+            overflow-x: hidden;
         }
 
         /* CABEÇALHO */
 
         header {
-            padding: 25px 8%;
+            padding: 22px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(0, 0, 0, 0.25);
+            background: rgba(0, 0, 0, 0.30);
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 20px;
         }
 
         header h1 {
             color: #e0aaff;
+            font-size: 27px;
         }
 
         nav {
             display: flex;
+            align-items: center;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 15px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            transition: 0.3s;
+            padding: 10px 15px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-size: 15px;
         }
 
         nav a:hover {
             color: #ff70d9;
+            background: rgba(255, 112, 217, 0.12);
         }
 
         /* CONTEÚDO PRINCIPAL */
 
         main {
+            width: 100%;
             padding: 80px 10%;
         }
 
@@ -74,16 +85,17 @@
         }
 
         .foto {
-            width: 250px;
-            height: 250px;
+            width: 270px;
+            height: 270px;
             border-radius: 50%;
             object-fit: cover;
             border: 5px solid #e0aaff;
             box-shadow: 0 0 30px #ab4edd;
+            flex-shrink: 0;
         }
 
         .texto {
-            max-width: 550px;
+            max-width: 600px;
         }
 
         .texto h2 {
@@ -101,47 +113,87 @@
             line-height: 1.8;
         }
 
-        button {
-            margin-top: 25px;
-            padding: 14px 30px;
+        /* BOTÕES */
+
+        .botoes-apresentacao {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 28px;
+        }
+
+        .botao {
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+            padding: 15px 28px;
             border: none;
             border-radius: 30px;
             background: linear-gradient(90deg, #ab4edd, #635bf1);
             color: white;
             cursor: pointer;
             font-size: 16px;
-            transition: 0.3s;
+            font-weight: bold;
+            transition: all 0.3s ease;
         }
 
-        button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 15px #ab4edd;
+        .botao:hover {
+            background: linear-gradient(90deg, #ff70d9, #ab4edd);
+            transform: translateY(-4px) scale(1.04);
+            box-shadow: 0 0 22px rgba(255, 112, 217, 0.7);
+        }
+
+        /* BOTÃO SOBRE MIM EM DESTAQUE */
+
+        .botao-sobre {
+            padding: 17px 35px;
+            font-size: 18px;
+            border: 2px solid #e0aaff;
+            box-shadow: 0 0 15px rgba(171, 78, 221, 0.5);
+            letter-spacing: 0.5px;
+        }
+
+        .botao-sobre:hover {
+            background: linear-gradient(90deg, #ff70d9, #ab4edd);
+            box-shadow: 0 0 25px rgba(255, 112, 217, 0.8);
         }
 
         #mensagem {
             margin-top: 15px;
             color: #e0aaff;
+            font-size: 15px;
         }
 
         /* SEÇÕES */
 
         section {
-            margin-top: 90px;
+            margin-top: 100px;
             text-align: center;
         }
 
         section h2 {
             color: #e0aaff;
-            margin-bottom: 30px;
-            font-size: 30px;
+            margin-bottom: 35px;
+            font-size: 32px;
         }
 
         /* SOBRE MIM */
 
         #sobre {
-            max-width: 1000px;
-            margin: 100px auto 0;
-            padding: 0 10px;
+            max-width: 1100px;
+            margin: 110px auto 0;
+            padding: 45px;
+            background: rgba(0, 0, 0, 0.20);
+            border: 1px solid rgba(224, 170, 255, 0.30);
+            border-radius: 25px;
+            box-shadow: 0 0 25px rgba(171, 78, 221, 0.15);
+            scroll-margin-top: 30px;
+        }
+
+        #sobre h2 {
+            font-size: 38px;
+            margin-bottom: 40px;
         }
 
         #sobre p {
@@ -172,6 +224,7 @@
         .habilidades span:hover {
             background: rgba(171, 78, 221, 0.35);
             transform: translateY(-4px);
+            box-shadow: 0 0 12px rgba(171, 78, 221, 0.4);
         }
 
         /* CONTATO */
@@ -184,13 +237,27 @@
         }
 
         .links a {
+            display: inline-block;
             color: #e0aaff;
             text-decoration: none;
+            padding: 12px 24px;
+            border: 1px solid #ab4edd;
+            border-radius: 25px;
             transition: 0.3s;
         }
 
         .links a:hover {
-            color: #ff70d9;
+            color: white;
+            background: #ab4edd;
+            transform: translateY(-3px);
+        }
+
+        /* ACESSIBILIDADE */
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid #ff70d9;
+            outline-offset: 4px;
         }
 
         /* RODAPÉ */
@@ -200,54 +267,173 @@
             padding: 30px;
             color: #ccc;
             margin-top: 50px;
-            background: rgba(0, 0, 0, 0.20);
+            background: rgba(0, 0, 0, 0.25);
         }
 
-        /* RESPONSIVIDADE PARA CELULARES */
+        /* TABLETS */
 
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
 
             header {
-                justify-content: center;
-                text-align: center;
-            }
-
-            nav {
-                justify-content: center;
-                gap: 15px;
+                padding: 20px 5%;
             }
 
             main {
-                padding: 50px 6%;
+                padding: 60px 6%;
             }
 
             .apresentacao {
                 gap: 35px;
-                text-align: center;
             }
 
             .foto {
-                width: 200px;
-                height: 200px;
+                width: 230px;
+                height: 230px;
+            }
+
+            .texto {
+                max-width: 100%;
+            }
+
+        }
+
+        /* CELULARES */
+
+        @media (max-width: 600px) {
+
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 5%;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 8px;
+            }
+
+            nav a {
+                font-size: 13px;
+                padding: 9px 10px;
+            }
+
+            main {
+                padding: 45px 6%;
+            }
+
+            .apresentacao {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .foto {
+                width: 190px;
+                height: 190px;
             }
 
             .texto h2 {
                 font-size: 32px;
             }
 
-            #sobre {
-                margin-top: 70px;
-                padding: 0;
+            .texto p {
+                font-size: 16px;
+                text-align: left;
             }
 
-            #sobre p {
-                font-size: 16px;
-                line-height: 1.8;
-                text-align: left;
+            .botoes-apresentacao {
+                justify-content: center;
+            }
+
+            .botao {
+                font-size: 15px;
+                padding: 14px 23px;
+            }
+
+            .botao-sobre {
+                font-size: 17px;
+                padding: 16px 30px;
+            }
+
+            section {
+                margin-top: 70px;
             }
 
             section h2 {
                 font-size: 26px;
+            }
+
+            #sobre {
+                margin-top: 80px;
+                padding: 25px 18px;
+            }
+
+            #sobre h2 {
+                font-size: 30px;
+                margin-bottom: 25px;
+            }
+
+            #sobre p {
+                font-size: 15px;
+                line-height: 1.8;
+                text-align: left;
+            }
+
+            .habilidades {
+                gap: 10px;
+            }
+
+            .habilidades span {
+                padding: 11px 15px;
+                font-size: 14px;
+            }
+
+            footer {
+                font-size: 13px;
+            }
+
+        }
+
+        /* TELAS MUITO PEQUENAS */
+
+        @media (max-width: 360px) {
+
+            nav {
+                gap: 5px;
+            }
+
+            nav a {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            .texto h2 {
+                font-size: 27px;
+            }
+
+            .foto {
+                width: 165px;
+                height: 165px;
+            }
+
+        }
+
+        /* RESPEITA PREFERÊNCIA POR MENOS ANIMAÇÕES */
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
             }
         }
 
@@ -259,14 +445,16 @@
     <!-- CABEÇALHO -->
 
     <header>
+
         <h1>Morgana GB</h1>
 
-        <nav>
+        <nav aria-label="Menu principal">
             <a href="#inicio">Início</a>
             <a href="#sobre">Sobre mim</a>
             <a href="#habilidades">Habilidades</a>
             <a href="#contato">Contato</a>
         </nav>
+
     </header>
 
     <!-- APRESENTAÇÃO -->
@@ -275,9 +463,11 @@
 
         <div class="apresentacao">
 
-            <img src="Morgana.jpeg"
-                 alt="Foto de Morgana"
-                 class="foto">
+            <img
+                src="Morgana.jpeg"
+                alt="Foto de Morgana"
+                class="foto"
+            >
 
             <div class="texto">
 
@@ -300,9 +490,17 @@
                     da tecnologia para criar soluções inovadoras.
                 </p>
 
-                <button onclick="mostrarMensagem()">
-                    Vamos conversar?
-                </button>
+                <div class="botoes-apresentacao">
+
+                    <a href="#sobre" class="botao botao-sobre">
+                        Sobre mim <span aria-hidden="true">→</span>
+                    </a>
+
+                    <a href="#contato" class="botao">
+                        Vamos conversar?
+                    </a>
+
+                </div>
 
                 <p id="mensagem" aria-live="polite"></p>
 
@@ -434,15 +632,19 @@
 
             <div class="links">
 
-                <a href="https://morgana28.github.io/webmypage/"
-                   target="_blank"
-                   rel="noopener noreferrer">
+                <a
+                    href="https://morgana28.github.io/webmypage/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     Meu Site
                 </a>
 
-                <a href="https://www.linkedin.com/in/morgana-brito-6b573570/"
-                   target="_blank"
-                   rel="noopener noreferrer">
+                <a
+                    href="https://www.linkedin.com/in/morgana-brito-6b573570/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     LinkedIn
                 </a>
 
@@ -457,19 +659,6 @@
     <footer>
         Desenvolvido por Morgana.BOT
     </footer>
-
-    <!-- JAVASCRIPT -->
-
-    <script>
-
-        function mostrarMensagem() {
-
-            document.getElementById("mensagem").innerHTML =
-                'Vamos nos conectar! Meu LinkedIn está logo abaixo. Obrigada pela visita!';
-
-        }
-
-    </script>
 
 </body>
 </html>
